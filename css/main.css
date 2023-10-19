@@ -193,17 +193,38 @@ h2 span {
     background: #157347;
 }
 
-.container {
-    max-width: 1240px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    z-index: 50;
-}
-
 .hidden {
     display: none !important;
+}
+
+.custom-box-shadow {
+    box-shadow: 0px -24px 28.8px 0px rgba(0, 73, 90, 0.21);
+}
+
+.custom-box-shadow--card {
+    box-shadow: 0px -17.82px 26.73px 0px rgba(0, 73, 90, 0.6);
+}
+
+.custom-drop-shadow {
+    filter: drop-shadow(0px -20px 30px rgba(0, 73, 90, 0.24));
+}
+
+.custom-drop-shadow--circle {
+    filter: drop-shadow(0px 16px 7px rgba(0, 73, 90, 0.35));
+    -webkit-filter: drop-shadow(0px 16px 7px rgba(0, 73, 90, 0.35));
+}
+
+@media (min-width: 1500px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1440px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 }
 
 /* Default CSS Code */
@@ -220,8 +241,8 @@ body {
     font-size: 18px;
     line-height: 27px;
     font-weight: 700;
-    background: var(--secondary-color);
-    color: var(--primary-dark-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
 }
 
 /* Header Area */
@@ -337,3 +358,198 @@ body {
     border-bottom: 0;
 }
 /* Hero Area */
+
+/* Career Map */
+
+.basic-area {
+    display: flex;
+    align-items: flex-start;
+}
+
+.basic-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.career-map__images {
+    width: 696px;
+}
+
+.career-map {
+    background-image: url(../images/career.bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+
+.career-map__content h2 {
+    margin-bottom: 20px;
+}
+
+.career-map__content p {
+    max-width: 412px;
+    margin-bottom: 20px;
+}
+
+.career-image {
+    position: relative;
+    z-index: 10;
+    width: 641px;
+}
+
+.career-image-top-layer {
+    width: 475px;
+    height: auto;
+    object-fit: contain;
+    top: 100px;
+    left: 221px;
+    z-index: 50;
+}
+
+.career-thumb-left-small {
+    width: 80px;
+    height: auto;
+    bottom: 100px;
+    left: -53px;
+    z-index: 50;
+}
+
+.career-thumb-left-big {
+    width: 124px;
+    height: auto;
+    top: 112px;
+    left: 135px;
+    z-index: 50;
+}
+
+.career-thumb-right-small {
+    width: 42px;
+    height: auto;
+    bottom: 94px;
+    right: -20px;
+    z-index: 50;
+}
+
+.career-thumb-right-big {
+    width: 80px;
+    height: auto;
+    top: 68px;
+    right: -35px;
+    z-index: 1;
+}
+
+/* Career Map */
+
+/* Interest Matcher */
+.interest-matcher {
+    background: radial-gradient(
+            47.51% 33.95% at 50.89% 96.75%,
+            #cce8f1 0%,
+            rgba(204, 232, 241, 0) 100%
+        ),
+        #047a9c;
+    height: 560px;
+    padding-top: 50px;
+}
+
+.interest-matcher__content h2 {
+    margin-bottom: 15px;
+}
+
+.interest-matcher__content p {
+    margin-bottom: 20px;
+    max-width: 794px;
+}
+
+.interest-matcher__images {
+    width: 832px;
+    margin-top: 25px;
+}
+
+.interest-matcher__main {
+    width: 531px;
+}
+
+.interest-matcher__team {
+    width: 350px;
+    bottom: 10px;
+    right: 0;
+    object-fit: contain;
+}
+
+/* Interest Matcher */
+
+/* Job Matcher */
+
+.job-matcher {
+    background: radial-gradient(
+            44.86% 44.6% at 50% 107.4%,
+            #7ac9e0 0%,
+            rgba(122, 201, 224, 0) 100%
+        ),
+        #c8ebf6;
+    height: 550px;
+    position: relative;
+    z-index: 50;
+}
+
+.job-matcher__content {
+    margin-top: -25px;
+}
+
+.job-matcher__content h2 {
+    max-width: 310px;
+    margin-bottom: 25px;
+}
+
+.job-matcher__content p {
+    margin-bottom: 25px;
+}
+
+.job-matcher__images {
+    width: 870px;
+    padding-left: 20px;
+    padding-bottom: 60px;
+}
+
+.job-matcher-image {
+    position: relative;
+    z-index: 10;
+    width: 470px;
+}
+
+.job-image-top-layer {
+    width: 415px;
+    height: auto;
+    object-fit: contain;
+    bottom: 0;
+    right: 70px;
+    z-index: 50;
+}
+
+.job-thumb-left {
+    width: 88px;
+    height: auto;
+    bottom: 126px;
+    left: -32px;
+    z-index: 50;
+}
+
+.job-thumb-middle {
+    width: 137px;
+    height: auto;
+    top: 68px;
+    right: 260px;
+    z-index: 50;
+}
+
+.job-thumb-right {
+    width: 88px;
+    height: auto;
+    bottom: 108px;
+    right: 18px;
+    z-index: 50;
+}
+
+/* Job Matcher */
