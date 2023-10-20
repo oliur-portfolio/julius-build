@@ -114,6 +114,7 @@ h2 {
     font-size: 35px;
     line-height: 42px;
     color: var(--text-primary-semi);
+    text-transform: uppercase;
 }
 
 h2 span {
@@ -271,7 +272,8 @@ body {
 }
 
 .nav-link:focus,
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--text-primary) !important;
 }
 
@@ -366,10 +368,16 @@ body {
     align-items: flex-start;
 }
 
-.basic-content {
+.basic-area .basic-content {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+}
+
+.basic-content h2 {
+    margin-bottom: 25px;
+}
+
+.basic-content p {
+    margin-bottom: 25px;
 }
 
 .career-map__images {
@@ -383,13 +391,12 @@ body {
     height: 550px;
 }
 
-.career-map__content h2 {
-    margin-bottom: 20px;
+.career-map__content {
+    margin-top: -10px;
 }
 
 .career-map__content p {
     max-width: 412px;
-    margin-bottom: 20px;
 }
 
 .career-image {
@@ -496,15 +503,11 @@ body {
 
 .job-matcher__content {
     margin-top: -25px;
+    max-width: 408px;
 }
 
 .job-matcher__content h2 {
     max-width: 310px;
-    margin-bottom: 25px;
-}
-
-.job-matcher__content p {
-    margin-bottom: 25px;
 }
 
 .job-matcher__images {
@@ -553,3 +556,145 @@ body {
 }
 
 /* Job Matcher */
+
+/* Course */
+
+.course {
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.35) 0%,
+            rgba(255, 255, 255, 0.35) 100%
+        ),
+        radial-gradient(
+            44.86% 44.6% at 50% 107.4%,
+            #7ac9e0 0%,
+            rgba(122, 201, 224, 0) 100%
+        ),
+        #e3f3f7;
+    min-height: 550px;
+    position: relative;
+    z-index: 50;
+}
+
+.course__content {
+    margin-top: 65px;
+    max-width: 433px;
+}
+
+.course__images {
+    padding-left: 160px;
+}
+
+.course-image {
+    position: relative;
+    z-index: 10;
+    width: 610px;
+}
+
+.course-top-layer {
+    width: 390px;
+    height: auto;
+    object-fit: contain;
+    bottom: 0;
+    right: -5px;
+    z-index: 50;
+}
+
+/* Course */
+
+/* Bootcamp */
+.bootcamp {
+    height: 550px;
+    padding-top: 50px;
+}
+
+.bootcamp__content h2 {
+    margin-bottom: 15px;
+}
+
+.bootcamp__content p {
+    margin-bottom: 20px;
+    max-width: 794px;
+}
+
+.bootcamp__images {
+    width: 713px;
+    margin-top: 40px;
+}
+
+.bootcamp__main {
+    width: 531px;
+}
+
+/* Bootcamp */
+
+/* Footer Area */
+.footer {
+    background: #008eb7;
+    padding-top: 70px;
+    padding-bottom: 48px;
+    position: relative;
+    z-index: 50;
+}
+
+.footer-logo {
+    width: fit-content;
+    height: 32px;
+}
+
+.footer-logo img {
+    object-fit: contain;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-top: 0.5px solid var(--bg-secondary);
+    border-bottom: 0.5px solid var(--bg-secondary);
+    padding: 25px 0;
+    margin: 25px 0;
+}
+
+.footer-nav li a {
+    color: var(--text-secondary);
+}
+
+.copyrights {
+    color: var(--text-secondary-muted);
+    font-weight: 500;
+}
+
+.footer-bottom-nav {
+    gap: 50px;
+}
+
+.footer-bottom-nav li {
+    position: relative;
+}
+
+.footer-bottom-nav li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    width: 2px;
+    height: 70%;
+    background: var(--bg-secondary);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.footer-bottom-nav li:last-child:after {
+    display: none;
+}
+
+.footer-bottom-nav li a {
+    color: var(--text-secondary-muted);
+    font-weight: 500;
+}
+
+/* Footer Area */

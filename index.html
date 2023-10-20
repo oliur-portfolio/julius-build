@@ -33,16 +33,24 @@
         />
 
         <link rel="stylesheet" href="css/bootstrap.min.css" />
+
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/responsive.css" />
 
         <meta name="theme-color" content="#fafafa" />
     </head>
 
-    <body>
+    <body
+        data-bs-spy="scroll"
+        data-bs-target="#navbar"
+        data-bs-root-margin="0px 0px -90%"
+        data-bs-smooth-scroll="true"
+        tabindex="0"
+    >
         <!-- Header Area -->
         <header class="header-area">
             <nav
+                id="navbar"
                 class="custom-nav navbar navbar-expand-lg bg-body-tertiary fixed-top"
             >
                 <div class="container-fluid">
@@ -66,25 +74,29 @@
                     >
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Career Map</a>
+                                <a class="nav-link" href="#career"
+                                    >Career Map</a
+                                >
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#"
+                                <a class="nav-link" href="#interest"
                                     >Interest Matcher</a
                                 >
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Job Matcher</a>
+                                <a class="nav-link" href="#job">Job Matcher</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Course</a>
+                                <a class="nav-link" href="#course">Course</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Bootcamp</a>
+                                <a class="nav-link" href="#bootcamp"
+                                    >Bootcamp</a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -96,7 +108,7 @@
         <!-- Main Content -->
         <main>
             <!-- Hero Area -->
-            <section class="hero-area">
+            <section id="home" class="hero-area">
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div class="carousel-indicators">
                         <button
@@ -213,7 +225,7 @@
             <!-- Hero Area -->
 
             <!-- Career Map -->
-            <section class="career-map d-flex align-items-end">
+            <section id="career" class="career-map d-flex align-items-end">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -286,7 +298,7 @@
             <!-- Career Map -->
 
             <!-- Interest Matcher -->
-            <section class="interest-matcher">
+            <section id="interest" class="interest-matcher">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -337,77 +349,202 @@
             <!-- Interest Matcher -->
 
             <!-- Job Matcher -->
-            <section class="job-matcher d-flex align-items-end">
+            <section id="job" class="job-matcher d-flex align-items-end">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="basic-area flex-row-reverse">
-                                <div
-                                    class="basic-content job-matcher__content mt-n1"
-                                >
-                                    <h2>
-                                        Where do my skills fit?
-                                        <span>Take this Job Matcher</span>
-                                    </h2>
-                                    <p>
-                                        Choose the job that mostly closely
-                                        aligns to your current position, and we
-                                        will identify clean energy jobs that
-                                        match.
-                                    </p>
+                        <div class="col-8">
+                            <div
+                                class="position-relative basic-image job-matcher__images"
+                            >
+                                <img
+                                    class="job-matcher-image"
+                                    src="images/job-matcher-img.png"
+                                    alt="job matcher"
+                                />
 
-                                    <a href="#" class="btn btn-success">
-                                        Take Job Matcher
-                                        <span>
-                                            <img
-                                                src="images/arrow.svg"
-                                                alt="arrow"
-                                            />
-                                        </span>
-                                    </a>
-                                </div>
+                                <img
+                                    class="position-absolute job-image-top-layer custom-drop-shadow"
+                                    src="images/job-top-layer.png"
+                                    alt="job matcher"
+                                />
 
-                                <div
-                                    class="position-relative basic-image job-matcher__images"
-                                >
-                                    <img
-                                        class="job-matcher-image"
-                                        src="images/job-matcher-img.png"
-                                        alt="job matcher"
-                                    />
+                                <img
+                                    class="position-absolute job-thumb-left custom-drop-shadow--circle"
+                                    src="images/job-thumb-left.png"
+                                    alt="job matcher thumbnail image"
+                                />
 
-                                    <img
-                                        class="position-absolute job-image-top-layer custom-drop-shadow"
-                                        src="images/job-top-layer.png"
-                                        alt="job matcher"
-                                    />
+                                <img
+                                    class="position-absolute job-thumb-middle custom-drop-shadow--circle"
+                                    src="images/job-thumb-middle.png"
+                                    alt="job matcher thumbnail image"
+                                />
 
-                                    <img
-                                        class="position-absolute job-thumb-left custom-drop-shadow--circle"
-                                        src="images/job-thumb-left.png"
-                                        alt="job matcher thumbnail image"
-                                    />
+                                <img
+                                    class="position-absolute job-thumb-right custom-drop-shadow--circle"
+                                    src="images/job-thumb-right.png"
+                                    alt="job matcher thumbnail image"
+                                />
+                            </div>
+                        </div>
 
-                                    <img
-                                        class="position-absolute job-thumb-middle custom-drop-shadow--circle"
-                                        src="images/job-thumb-middle.png"
-                                        alt="job matcher thumbnail image"
-                                    />
+                        <div class="col-4">
+                            <div class="basic-content job-matcher__content">
+                                <h2>
+                                    Where do my skills fit?
+                                    <span>Take this Job Matcher</span>
+                                </h2>
+                                <p>
+                                    Choose the job that mostly closely aligns to
+                                    your current position, and we will identify
+                                    clean energy jobs that match.
+                                </p>
 
-                                    <img
-                                        class="position-absolute job-thumb-right custom-drop-shadow--circle"
-                                        src="images/job-thumb-right.png"
-                                        alt="job matcher thumbnail image"
-                                    />
-                                </div>
+                                <a href="#" class="btn btn-success">
+                                    Take Job Matcher
+                                    <span>
+                                        <img
+                                            src="images/arrow.svg"
+                                            alt="arrow"
+                                        />
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- Job Matcher -->
+
+            <!-- Course -->
+            <section id="course" class="course d-flex align-items-end">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="basic-content course__content">
+                                <h2>
+                                    WANT TO LEARN MORE?
+                                    <span>TAKE THIS INTRO COURSE​</span>
+                                </h2>
+                                <p>
+                                    The Energy Industry Fundamentals course will
+                                    introduce you to important clean energy
+                                    careers and provide an industry credential.
+                                </p>
+
+                                <a href="#" class="btn btn-success">
+                                    Take the Intro Course
+                                    <span>
+                                        <img
+                                            src="images/arrow.svg"
+                                            alt="arrow"
+                                        />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-8">
+                            <div
+                                class="position-relative basic-image course__images"
+                            >
+                                <img
+                                    class="course-image"
+                                    src="images/course-img.png"
+                                    alt="course"
+                                />
+
+                                <img
+                                    class="position-absolute course-top-layer custom-drop-shadow"
+                                    src="images/course-top-layer.png"
+                                    alt="course"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Course -->
+
+            <!-- Bootcamp -->
+            <section id="bootcamp" class="bootcamp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="bootcamp__content text-center">
+                                <h2 class="">
+                                    WANT THIS JOB?
+                                    <span
+                                        >ENROLL IN OUR FOUR WEEK BOOTCAMP</span
+                                    >
+                                </h2>
+
+                                <p class="mx-auto">
+                                    Get free job training to jumpstart your
+                                    green career and start making more money!
+                                </p>
+
+                                <a href="#" class="btn btn-success mx-auto">
+                                    Enroll Today
+                                    <span>
+                                        <img
+                                            src="images/arrow.svg"
+                                            alt="arrow"
+                                        />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="bootcamp__images mx-auto">
+                                <img
+                                    class="bootcamp__main-img custom-drop-shadow"
+                                    src="images/bootcamp-main.png"
+                                    alt="matcher main"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Bootcamp -->
         </main>
         <!-- Main Content -->
+
+        <!-- Footer Area -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <a class="footer-logo p-0 me-0" href="#">
+                        <img src="/images/footer-logo.png" alt="Footer logo" />
+                    </a>
+
+                    <ul class="footer-nav">
+                        <li><a href="#career">Career Map</a></li>
+                        <li><a href="#interest">Interest Matcher</a></li>
+                        <li><a href="#job">Job Matcher</a></li>
+                        <li><a href="#course">Course</a></li>
+                        <li><a href="#bootcamp">Bootcamp</a></li>
+                    </ul>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="copyrights">© Julius Education 2023</p>
+                        </div>
+                        <div class="col-6">
+                            <ul
+                                class="footer-bottom-nav d-flex justify-content-end"
+                            >
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Area -->
 
         <!-- JS Files -->
         <script src="js/bootstrap.bundle.min.js"></script>
