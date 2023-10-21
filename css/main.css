@@ -246,11 +246,14 @@ body {
     color: var(--text-primary);
 }
 
+main {
+    overflow: hidden;
+}
+
 /* Header Area */
 
 .navbar {
-    padding: 11px 25px;
-    height: 60px;
+    padding: 16px 30px;
 }
 
 .navbar-brand {
@@ -282,6 +285,24 @@ body {
 /* Hero Area */
 .carousel-item {
     height: 763px;
+}
+
+.slide-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide-bg1 {
+    background-image: url("../images/slide-1.jpg");
+}
+
+.slide-bg2 {
+    background-image: url("../images/slide-2.jpg");
+}
+
+.slide-bg3 {
+    background-image: url("../images/slide-3.jpg");
 }
 
 .carousel-caption {
@@ -380,15 +401,15 @@ body {
     margin-bottom: 25px;
 }
 
-.career-map__images {
-    width: 696px;
-}
-
 .career-map {
     background-image: url(../images/career.bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 550px;
+}
+
+.career-map .basic-area {
+    padding-right: 18px;
 }
 
 .career-map__content {
@@ -397,6 +418,10 @@ body {
 
 .career-map__content p {
     max-width: 412px;
+}
+
+.career-map__images {
+    width: 696px;
 }
 
 .career-image {
@@ -480,7 +505,7 @@ body {
 
 .interest-matcher__team {
     width: 350px;
-    bottom: 10px;
+    bottom: 15px;
     right: 0;
     object-fit: contain;
 }

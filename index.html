@@ -7,10 +7,7 @@
         <title>Julius Home Page</title>
 
         <!-- Meta Tags -->
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="author" content="" />
@@ -27,11 +24,6 @@
         />
 
         <!-- Custom CSS File -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        />
-
         <link rel="stylesheet" href="css/bootstrap.min.css" />
 
         <link rel="stylesheet" href="css/main.css" />
@@ -53,7 +45,7 @@
                 id="navbar"
                 class="custom-nav navbar navbar-expand-lg bg-body-tertiary fixed-top"
             >
-                <div class="container-fluid">
+                <div class="container-fluid p-0">
                     <a class="navbar-brand p-0 me-0" href="#">
                         <img src="/images/logo.png" alt="Logo" />
                     </a>
@@ -72,7 +64,7 @@
                         class="collapse navbar-collapse"
                         id="navbarSupportedContent"
                     >
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#career"
                                     >Career Map</a
@@ -108,12 +100,18 @@
         <!-- Main Content -->
         <main>
             <!-- Hero Area -->
-            <section id="home" class="hero-area">
-                <div id="carouselExampleCaptions" class="carousel slide">
+            <section class="hero-area">
+                <div
+                    id="carouselHero"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                    data-bs-interval="4000"
+                    data-bs-pause="false"
+                >
                     <div class="carousel-indicators">
                         <button
                             type="button"
-                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-target="#carouselHero"
                             data-bs-slide-to="0"
                             class="active rounded-start-5"
                             aria-current="true"
@@ -121,13 +119,13 @@
                         ></button>
                         <button
                             type="button"
-                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-target="#carouselHero"
                             data-bs-slide-to="1"
                             aria-label="Slide 2"
                         ></button>
                         <button
                             type="button"
-                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-target="#carouselHero"
                             data-bs-slide-to="2"
                             class="rounded-end-5"
                             aria-label="Slide 3"
@@ -135,13 +133,7 @@
                     </div>
 
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img
-                                src="images/slide-1.jpg"
-                                class="d-block w-100"
-                                alt=""
-                            />
-
+                        <div class="carousel-item slide-bg slide-bg1 active">
                             <div
                                 class="carousel-caption d-none d-md-block text-start"
                             >
@@ -154,13 +146,7 @@
                             </div>
                         </div>
 
-                        <div class="carousel-item">
-                            <img
-                                src="images/slide-2.jpg"
-                                class="d-block w-100"
-                                alt=""
-                            />
-
+                        <div class="carousel-item slide-bg slide-bg2">
                             <div
                                 class="carousel-caption d-none d-md-block text-start"
                             >
@@ -172,13 +158,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img
-                                src="images/slide-3.jpg"
-                                class="d-block w-100"
-                                alt=""
-                            />
 
+                        <div class="carousel-item slide-bg slide-bg3">
                             <div
                                 class="carousel-caption d-none d-md-block text-start"
                             >
@@ -196,7 +177,7 @@
                         <button
                             class="carousel-control-prev"
                             type="button"
-                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-target="#carouselHero"
                             data-bs-slide="prev"
                         >
                             <span
@@ -209,7 +190,7 @@
                         <button
                             class="carousel-control-next"
                             type="button"
-                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-target="#carouselHero"
                             data-bs-slide="next"
                         >
                             <span
@@ -229,7 +210,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="basic-area">
+                            <div class="basic-area flex-column flex-xl-row">
                                 <div class="basic-content career-map__content">
                                     <h2 class="heading--semi-text">
                                         THERE’S ROOM FOR GROWTH,
@@ -352,7 +333,7 @@
             <section id="job" class="job-matcher d-flex align-items-end">
                 <div class="container">
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-12 col-lg-8 order-2">
                             <div
                                 class="position-relative basic-image job-matcher__images"
                             >
@@ -388,7 +369,7 @@
                             </div>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-12 col-lg-4 order-1 order-lg-2">
                             <div class="basic-content job-matcher__content">
                                 <h2>
                                     Where do my skills fit?
@@ -420,7 +401,7 @@
             <section id="course" class="course d-flex align-items-end">
                 <div class="container">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-lg-4">
                             <div class="basic-content course__content">
                                 <h2>
                                     WANT TO LEARN MORE?
@@ -444,7 +425,7 @@
                             </div>
                         </div>
 
-                        <div class="col-8">
+                        <div class="col-12 col-lg-8">
                             <div
                                 class="position-relative basic-image course__images"
                             >
@@ -529,12 +510,12 @@
                     </ul>
 
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-xl-6">
                             <p class="copyrights">© Julius Education 2023</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-xl-6">
                             <ul
-                                class="footer-bottom-nav d-flex justify-content-end"
+                                class="footer-bottom-nav d-flex justify-content-start justify-content-xl-end"
                             >
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Terms of Service</a></li>
